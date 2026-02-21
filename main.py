@@ -26,14 +26,14 @@ def getenv(var): return environ.get(var) or DATA.get(var, None)
 API_ID = int(os.environ.get("API_ID", "27958870"))
 API_HASH = os.environ.get("API_HASH", "90227e2449ed6924b95f241b0110d1e6")
 BOT_TOKEN = os.environ.get("BOT_TOKEN", "8426633238:AAGTa5eTLy3jueGruhKAad2g8u8bvu8oRGg")
-OWNER_ID = os.environ.get("OWNER_ID","880087645")
+OWNER_ID = os.environ.get("OWNER_ID", "7404203924")
 ADMIN_LIST = [int(ch) for ch in (os.environ.get("ADMIN_LIST", f"{OWNER_ID}")).split()]
 OWNER_USERNAME = "JAsuran2p0"
 PERMANENT_GROUP = os.environ.get("PERMANENT_GROUP", "-1001775437494")
 GROUP_ID = [int(ch) for ch in (os.environ.get("GROUP_ID", f"{PERMANENT_GROUP}")).split()]
-UPDATES_CHANNEL = str(os.environ.get("UPDATES_CHANNEL", "AS_botzz"))
+UPDATES_CHANNEL = str(os.environ.get("UPDATES_CHANNEL", "RDX_PVT_HD"))
 DB_URL = os.environ.get("DB_URL", "mongodb+srv://dhanapal:dhanapal@dhanapal.pvrwtmv.mongodb.net/?retryWrites=true&w=majority")
-U_NAME = os.environ.get("BOT_USERNAME", "@RDX_PVT_HD")
+U_NAME = os.environ.get("BOT_USERNAME", "RDX_PVT_HD")
 
 app = Client("my_bot",api_id=api_id, api_hash=api_hash,bot_token=bot_token)
 
@@ -533,4 +533,5 @@ def docfile(
 # server loop
 print("Bot Starting")
 app.run()
+
 
