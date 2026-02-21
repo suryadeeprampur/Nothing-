@@ -9,7 +9,7 @@ from uuid import uuid4
 
 from bs4 import BeautifulSoup
 from cfscrape import create_scraper
-from lk21 import Bypass
+#from lk21 import Bypass
 from lxml import etree
 from requests import get, session
 import requests
@@ -948,3 +948,4 @@ def zippyshare(url):
         return f"ERROR: uri1 or uri2 not found with method {method}"
     domain = urlparse(url).hostname
     return f"https://{domain}/{uri1[0]}/{mtk}/{uri2[0]}"
+
