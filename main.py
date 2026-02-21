@@ -35,8 +35,12 @@ UPDATES_CHANNEL = str(os.environ.get("UPDATES_CHANNEL", "RDX_PVT_HD"))
 DB_URL = os.environ.get("DB_URL", "mongodb+srv://dhanapal:dhanapal@dhanapal.pvrwtmv.mongodb.net/?retryWrites=true&w=majority")
 U_NAME = os.environ.get("BOT_USERNAME", "RDX_PVT_HD")
 
-app = Client("my_bot",api_id=api_id, api_hash=api_hash,bot_token=bot_token)
-
+app = Client(
+    "my_bot",
+    api_id=API_ID,
+    api_hash=API_HASH,
+    bot_token=BOT_TOKEN
+)
 # db setup
 client = MongoClient(DB_URL)
 db = client["mydb"]
@@ -533,5 +537,6 @@ def docfile(
 # server loop
 print("Bot Starting")
 app.run()
+
 
 
