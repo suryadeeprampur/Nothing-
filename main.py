@@ -29,7 +29,7 @@ BOT_TOKEN = os.environ.get("BOT_TOKEN", "8426633238:AAGTa5eTLy3jueGruhKAad2g8u8b
 OWNER_ID = os.environ.get("OWNER_ID", "7404203924")
 ADMIN_LIST = [int(ch) for ch in (os.environ.get("ADMIN_LIST", f"{OWNER_ID}")).split()]
 OWNER_USERNAME = "RDX1444"
-PERMANENT_GROUP = os.environ.get("PERMANENT_GROUP", "-1001775437494")
+PERMANENT_GROUP = os.environ.get("PERMANENT_GROUP", "-1002767984756")
 GROUP_ID = [int(ch) for ch in (os.environ.get("GROUP_ID", f"{PERMANENT_GROUP}")).split()]
 UPDATES_CHANNEL = str(os.environ.get("UPDATES_CHANNEL", "RDX_PVT_HD"))
 DB_URL = os.environ.get("DB_URL", "mongodb+srv://dhanapal:dhanapal@dhanapal.pvrwtmv.mongodb.net/?retryWrites=true&w=majority")
@@ -537,6 +537,7 @@ def docfile(
 # server loop
 print("Bot Starting")
 app.run()
+
 
 
 
