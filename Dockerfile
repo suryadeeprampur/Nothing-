@@ -1,9 +1,18 @@
-FROM python:3.9
+FROM python:3.8
+
 WORKDIR /app1
 
-COPY requirements.txt /app1/
-RUN pip3 install -r requirements.txt
+# Copy requirements first
+COPY requirements.txt .
 
-COPY . /app1
+# Install dependencies
+RUN pip install --no-cache-dir -r requirements.txt
 
-CMD flask run -h 0.0.0.0 -p 10000 & python3 main.py
+# Copy all project files
+COPY . .
+
+# Expose port (optional but good practice)
+EXPOSE 10000
+
+# Run your app
+CMD ["python3", "main.py"]
