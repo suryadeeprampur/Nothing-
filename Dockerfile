@@ -1,18 +1,11 @@
-FROM python:3.8
+FROM python:3.10-slim
 
-WORKDIR /app1
+WORKDIR /app
 
-# Copy requirements first
 COPY requirements.txt .
-
-# Install dependencies
+RUN pip install --upgrade pip
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy all project files
 COPY . .
 
-# Expose port (optional but good practice)
-EXPOSE 10000
-
-# Run your app
-CMD ["python3", "main.py"]
+CMD ["python", "main.py"]
